@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-
 import { DataContext } from '../ProductContext/Context';
 import './ProductDetails.css'
 
@@ -11,7 +10,7 @@ export class ProductDetails extends Component {
         product: []
     }
 
-    getProduct = () =>{
+    getProduct = (props) =>{
         if(this.props.match.params.id){
             const res = this.context.products;
             const data = res.filter(item =>{

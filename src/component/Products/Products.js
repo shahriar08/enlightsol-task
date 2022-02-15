@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Card, Container } from 'react-bootstrap';
 // import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { DataContext } from '../ProductContext/Context';
@@ -11,10 +12,10 @@ export class Products extends Component {
     render() {
         const {products,addCart} = this.context;
         return (
-            <div id="product">
+            <Container id="product">
                {
                    products.map(product =>(
-                       <div className="card" key={product._id}>
+                       <Card className="card" key={product._id}>
                            <Link to={`/product/${product._id}`}>
                                <img src={product.src} alt=""/>
                            </Link>
@@ -25,10 +26,10 @@ export class Products extends Component {
                                <span>${product.price}</span>
                                <button onClick={()=> addCart(product._id)}>Add to cart</button>
                            </div>
-                       </div>
+                       </Card>
                    ))
                }
-            </div>
+            </Container>
         )
     }
 }

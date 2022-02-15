@@ -34,10 +34,10 @@
     color: #333;
 }
 .card h4 a:hover{
-    color: crimson;
+    color: #ff2e63;
 }
 .card span{
-    color: crimson;
+    color: #ff2e63;
 }
 .card p{
     margin: 10px 0;
